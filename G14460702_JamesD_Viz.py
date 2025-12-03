@@ -9,10 +9,12 @@ import numpy as np
 time = np.linspace(0, 10, 100)
 signal = np.sin(time) + 0.2 * np.random.randn(100)
 
+print(time)
+print(signal)
 # 2. Process
 plt.figure(figsize=(9, 4))
 plt.plot(time, signal, color='steelblue', linewidth=2, label='Sensor signal')
-plt.title('Signal Over Time')
+plt.title('JamesD: Signal Over Time')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Amplitude')
 plt.legend()
