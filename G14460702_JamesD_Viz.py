@@ -70,7 +70,7 @@ plt.ylabel('Value')
 plt.show()
 
 # 2F. Subplots
-fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+fig, axes = plt.subplots(1, 4, figsize=(10, 5))
 
 x = np.linspace(0, 5, 50)
 axes[0].plot(x, np.exp(-x), color='teal', linewidth=2)
@@ -79,9 +79,17 @@ axes[0].grid(True, alpha=0.3)
 
 axes[1].scatter(np.random.randn(50), np.random.randn(50), c='firebrick', alpha=0.7)
 axes[1].set_title('Random Scatter')
-axes[1].grid(True, alpha=0.3)
+axes[1].grid(True, alpha=0.9)
 
-fig.suptitle('Two-Panel Subplot Layout', y=0.98)
+axes[2].scatter(np.random.randn(50), np.random.randn(50), c='firebrick', alpha=0.7)
+axes[2].set_title('Random Scatter')
+axes[2].grid(True, alpha=0.9)
+
+axes[3].plot(x, np.exp(-x), color='teal', linewidth=2)
+axes[3].set_title('Exponential Decay')
+axes[3].grid(True, alpha=0.3)
+
+fig.suptitle('JamesD Four-Panel Subplot Layout', y=0.98)
 plt.tight_layout()
 
 plt.show()
